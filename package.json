@@ -1,0 +1,52 @@
+{
+  "name": "github-manager",
+  "version": "0.0.1-alpha1",
+  "description": "github-manager by TotallyInformation. Manage GitHub organisations and teams from scripts. Includes bulk user creation.",
+  "main": "index.js",
+
+  "scripts": {
+    "start": "node ./index.js",
+    "ghaddusers": "node ./add-user-to-team.js",
+
+    "docs": "docsify serve ./docs",
+    "man": "cd man && marked-man --version 'v1.0.0' --manual 'Cuttlebelle Help' --section 1 man.md > cuttlebelle.1",
+
+    "gittag": "git tag -a v%npm_package_version%",
+    "gitpushtags": "git push origin --tags",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ghlistteams": "./scripts/list-teams-in-org.js",
+    "ghaddusers": "./scripts/add-users-to-team.js"
+  },
+  "directories": {
+    "man": "man"
+  },
+
+  "dependencies": {
+    "@octokit/core": "^3.3.1",
+    "ansi-colors": "^4.1.1",
+    "ora": "^5.4.0",
+    "yaml": "^1.10.2",
+    "yurnalist": "^2.1.0"
+  },
+  "optionalDependencies": {
+    "docsify-cli": "^4.4.3"
+  },
+  "devDependencies": {
+    "marked-man": "^0.7.0"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TotallyInformation/github-manager.git"
+  },
+  "keywords": [],
+  "author": "Julian Knight (https://it.knightnet.org.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TotallyInformation/github-manager/issues"
+  },
+  "homepage": "https://github.com/TotallyInformation/github-manager#readme"
+}

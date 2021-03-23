@@ -1,0 +1,24 @@
+# This is an EXAMPLE _config.yaml file
+# Please rename and adjust to your own needs.
+# If you can cloned or copied this repository, 
+#    any file starting with _ will not be added to GIT
+#    and therefore will not be copied to upstream repositories (e.g. GitHub)
+
+# The generated user access token required for the API
+# Generate one here: https://github.com/settings/tokens/new?scopes=repo
+# vvv This is obviously not a real token! vvv
+accessToken: 12ab12ab12ab12ab12ab12ab12ab12ab12ab12ab
+
+# The GitHub organisation ID (slug) to manage - required for most commands
+org: github-org-slug
+
+# The GitHub Team ID (slug) to manage - required only for Team management commands
+team: github-team-slug
+
+# List of users to manage or to add/remove - required for user management and team/org permissions commands
+userList:
+  - id: github-user-id    # THe GitHub user ID
+    role: member          # The role this user will have in the team: "member" | "maintainer"
+  - id: github-user-id2
+    role: maintainer
+
