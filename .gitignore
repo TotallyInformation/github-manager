@@ -1,3 +1,7 @@
+# Ignore sensitive files - anything starting with an _
+_*
+
+
 # Logs
 logs
 *.log
